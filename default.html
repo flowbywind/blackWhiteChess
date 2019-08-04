@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+    <body>
+               <div id="board">
+                </div> 
+    </body>
+    <script type="text/javascript">
+        let map = [
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,2,1,0,0,0],
+            [0,0,0,1,2,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0]
+        ];
+        let container=document.getElementById("board")
+        for(var i=0;i<8;i++){
+            for(var j=0;i<8;j++){
+               let cell = document.createElement("div");
+               container.append(cell);
+               cell.style="vertical-align:middle; width:30px;height:30px; background-color:green;margin:1px;";
+               if(map[i][j]==1){
+                   let disc=document.createElement("div");
+                   disc.style="margin:2px; border-radius:13px;width:26px;height:26px;background-color:black";
+                   cell.appendChild(disc);
+               }else if(map[i][j]==2){
+                let disc=document.createElement("div");
+                   disc.style="margin:2px; border-radius:13px;width:26px;height:26px;background-color:black";
+                   cell.appendChild(disc);
+               }
+            }
+            container.appendChild( document.createElement("<br/>"));
+        }
+    </script>
+
+</html>
